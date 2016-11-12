@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 /**
  * Created by 1015331 on 2016-11-11.
@@ -15,18 +18,16 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 public class App implements CommandLineRunner{
     @Autowired
-    CustomerService customerService;
+    NamedParameterJdbcTemplate jdbcTemplate;
+
 
     @Override
     public void run(String... strings) throws Exception {
-        //데이터 추가
-        customerService.save(new Customer(1, "jay", "ju"));
-        customerService.save(new Customer(2, "jh", "yu"));
-        customerService.save(new Customer(3, "yw", "ju"));
+        String sql = "SELECT 1";
+        SqlParameterSource param = new MapSqlParameterSource();
+        Integer result = jdbcTemplate.queryForObject(sql, param, Integer.class);
 
-        //데이터 표시
-        customerService.findAll()
-                .forEach(System.out::println);
+        System.out.println("result: " + result);
     }
 
     public static void main(String[] args) {
