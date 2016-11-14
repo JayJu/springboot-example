@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.domain.Customer;
+import com.example.repository.CustomerRepository;
 import com.example.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -22,19 +23,18 @@ import java.sql.SQLException;
 @ComponentScan
 public class App implements CommandLineRunner{
     @Autowired
-    NamedParameterJdbcTemplate jdbcTemplate;
+    CustomerRepository customerRepository;
 
 
     @Override
     public void run(String... strings) throws Exception {
-        String sql = "SELECT id, first_name, last_name FROM  customers WHERE id = :id";
-        SqlParameterSource param = new MapSqlParameterSource()
-                .addValue("id", 1);
+        //데이터 추가
+        Customer created = customerRepository.save(new Customer(null, "Trump", "Donald"));
+        System.out.println(created + "is created!");
 
-        Customer result = jdbcTemplate.queryForObject(sql, param,
-                (resultSet, rowNum) -> new Customer(resultSet.getInt("id"), resultSet.getString("first_name"), resultSet.getString("last_name")));
-
-        System.out.println("result: " + result);
+        //데이터 표시
+        customerRepository.findAll()
+                .forEach(System.out::println);
     }
 
     public static void main(String[] args) {

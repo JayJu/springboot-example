@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca2e9524-ed77-4260-9247-857c936c7109" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lazyluke_log4jdbc_remix_0_2_7.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/example/HajibootLayeringApplication.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/App.class" afterPath="$PROJECT_DIR$/target/classes/com/example/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/domain/Customer.class" afterPath="$PROJECT_DIR$/target/classes/com/example/domain/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/repository/CustomerRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/example/repository/CustomerRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hajiboot-layering.iml" afterPath="$PROJECT_DIR$/hajiboot-layering.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java" />
     </list>
     <ignored path="hajiboot-layering.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,6 +57,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CustomerRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+              <folding>
+                <marker date="1479119484996" expanded="true" signature="1589:1651" ph="SELECT id, f... customers" />
+                <marker date="1479119484996" expanded="true" signature="1920:2021" ph="INSERT INTO customers... " />
+                <marker date="1479119484996" expanded="true" signature="2405:2439" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="logback.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,26 +91,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="463">
+              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1542#1543#0" expanded="true" />
-                <marker date="1479108694674" expanded="true" signature="1009:1016" ph="SELECT :a + " />
-                <marker date="1479108694674" expanded="true" signature="1009:1072" ph="SELECT id, f... customers" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1402#1403#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="387">
+              <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,17 +152,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/com/example/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/com/example/repository/CustomerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/service/CustomerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/AppJdbc.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e569ca5d-f308-40fc-8b0e-c7091bb3c454/console.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/domain/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/App.java" />
       </list>
     </option>
   </component>
@@ -457,6 +465,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hajiboot-layering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hajiboot-layering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -858,7 +896,7 @@
       <updated>1478847594950</updated>
       <workItem from="1478847601287" duration="2573000" />
       <workItem from="1478852583377" duration="413000" />
-      <workItem from="1478853012620" duration="17982000" />
+      <workItem from="1478853012620" duration="19197000" />
     </task>
     <task id="LOCAL-00001" summary="2.1.6 레이어로 구성한 컴포넌트 주입하기">
       <created>1478848733855</created>
@@ -895,11 +933,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479114956469</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2.2.1 JdbcTemplate 으로 접속하기&#10; - Log4JDBC 로 SQL 로그 출력하기&#10; - App.Config 의 dataSource() 주석처리..&#10;   -&gt; dataSource 객체 생성 없이 return 하므로 NullpointerException 발생함">
+      <created>1479118548937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1479118548937</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20968000" />
+    <option name="totallyTimeSpent" value="22183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -947,7 +992,8 @@
     <MESSAGE value="2.2.1 JdbcTemplate 으로 접속하기" />
     <MESSAGE value="2.2.1 JdbcTemplate 으로 접속하기&#10; - 익명클래스를 Lamda 식으로 변경" />
     <MESSAGE value="2.2.1 JdbcTemplate 으로 접속하기&#10; - Log4JDBC 로 SQL 로그 출력하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.2.1 JdbcTemplate 으로 접속하기&#10; - Log4JDBC 로 SQL 로그 출력하기" />
+    <MESSAGE value="2.2.1 JdbcTemplate 으로 접속하기&#10; - Log4JDBC 로 SQL 로그 출력하기&#10; - App.Config 의 dataSource() 주석처리..&#10;   -&gt; dataSource 객체 생성 없이 return 하므로 NullpointerException 발생함" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.2.1 JdbcTemplate 으로 접속하기&#10; - Log4JDBC 로 SQL 로그 출력하기&#10; - App.Config 의 dataSource() 주석처리..&#10;   -&gt; dataSource 객체 생성 없이 return 하므로 NullpointerException 발생함" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -979,10 +1025,10 @@
         <state relative-caret-position="228">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#503#504#0" expanded="false" />
-            <element signature="e#554#555#0" expanded="false" />
-            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -993,9 +1039,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1542#1543#0" expanded="true" />
-            <marker date="1479108694674" expanded="true" signature="1009:1016" ph="SELECT :a + " />
-            <marker date="1479108694674" expanded="true" signature="1009:1072" ph="SELECT id, f... customers" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1029,10 +1074,10 @@
         <state relative-caret-position="133">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#503#504#0" expanded="false" />
-            <element signature="e#554#555#0" expanded="false" />
-            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1043,9 +1088,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1542#1543#0" expanded="true" />
-            <marker date="1479108694674" expanded="true" signature="1009:1016" ph="SELECT :a + " />
-            <marker date="1479108694674" expanded="true" signature="1009:1072" ph="SELECT id, f... customers" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1063,19 +1107,6 @@
         <state relative-caret-position="228">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#503#504#0" expanded="false" />
-            <element signature="e#554#555#0" expanded="false" />
-            <element signature="e#604#605#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1159,25 +1190,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1542#1543#0" expanded="true" />
-            <marker date="1479108694674" expanded="true" signature="1009:1016" ph="SELECT :a + " />
-            <marker date="1479108694674" expanded="true" signature="1009:1072" ph="SELECT id, f... customers" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/AppConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repository/CustomerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="539">
+          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding>
+            <marker date="1479119484996" expanded="true" signature="1589:1651" ph="SELECT id, f... customers" />
+            <marker date="1479119484996" expanded="true" signature="1920:2021" ph="INSERT INTO customers... " />
+            <marker date="1479119484996" expanded="true" signature="2405:2439" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
           </folding>
         </state>
       </provider>
