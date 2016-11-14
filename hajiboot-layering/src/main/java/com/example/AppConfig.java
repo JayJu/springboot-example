@@ -20,7 +20,13 @@ public class AppConfig {
     @Autowired
     DataSourceProperties dataSourceProperties;
     DataSource dataSource;
-
+/*
+    @Bean
+    @Primary
+    DataSource dataSource() {
+        return new Log4jdbcProxyDataSource(this.dataSource);
+    }
+  */
     @Bean
     DataSource realDataSource() {
         DataSourceBuilder factory = DataSourceBuilder
@@ -30,12 +36,7 @@ public class AppConfig {
                 .password(this.dataSourceProperties.getPassword());
         this.dataSource = factory.build();
 
-        return this.dataSource;
-    }
-
-    @Bean
-    @Primary
-    DataSource dataSource() {
+        //return this.dataSource;
         return new Log4jdbcProxyDataSource(this.dataSource);
     }
 }
