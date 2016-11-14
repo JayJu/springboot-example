@@ -30,12 +30,9 @@ public class App implements CommandLineRunner{
         String sql = "SELECT id, first_name, last_name FROM  customers WHERE id = :id";
         SqlParameterSource param = new MapSqlParameterSource()
                 .addValue("id", 1);
-        Customer result = jdbcTemplate.queryForObject(sql, param, new RowMapper<Customer>() {
-            @Override
-            public Customer mapRow(ResultSet resultSet, int i) throws SQLException {
-                return new Customer(resultSet.getInt("id"), resultSet.getString("first_name"), resultSet.getString("last_name"));
-            }
-        });
+
+        Customer result = jdbcTemplate.queryForObject(sql, param,
+                (resultSet, rowNum) -> new Customer(resultSet.getInt("id"), resultSet.getString("first_name"), resultSet.getString("last_name")));
 
         System.out.println("result: " + result);
     }
