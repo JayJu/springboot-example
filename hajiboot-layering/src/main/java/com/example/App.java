@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 /**
  * Created by 1015331 on 2016-11-11.
@@ -24,12 +27,15 @@ public class App implements CommandLineRunner{
         Customer created = customerRepository.save(new Customer(null, "Trump", "Donald"));
         System.out.println(created + "is created!");
 
-        //데이터 표시
-        customerRepository.findAllOrderByName()
-                .forEach(System.out::println);
+        //페이징 처리
+        Pageable pageable = new PageRequest(1,3);
+        Page<Customer> page = customerRepository.findAllOrderByName(pageable);
+        System.out.println("한 페이지당 데이터 수 = " + page.getSize());
+        System.out.println("현재 페이지 수 = " + page.getNumber());
+        System.out.println("전체 페이지 수 = " + page.getTotalPages());
+        System.out.println("전체 데이터 수 = " + page.getTotalElements());
 
-        customerRepository.findAllOrderById()
-                .forEach(System.out::println);
+        page.getContent().forEach(System.out::println);
     }
 
     public static void main(String[] args) {
