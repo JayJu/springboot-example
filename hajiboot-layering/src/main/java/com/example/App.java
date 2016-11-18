@@ -2,7 +2,6 @@ package com.example;
 
 import com.example.domain.Customer;
 import com.example.repository.CustomerRepository;
-import com.example.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
