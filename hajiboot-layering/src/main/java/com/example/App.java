@@ -25,7 +25,10 @@ public class App implements CommandLineRunner{
         System.out.println(created + "is created!");
 
         //데이터 표시
-        customerRepository.findAll()
+        customerRepository.findAllOrderByName()
+                .forEach(System.out::println);
+
+        customerRepository.findAllOrderById()
                 .forEach(System.out::println);
     }
 
