@@ -1,0 +1,29 @@
+package com.example.web;
+
+import com.example.domain.Customer;
+import com.example.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
+
+/**
+ * Created by 1015331 on 2016-11-19.
+ */
+@Controller
+@RequestMapping("customers")
+public class CustomerController {
+    @Autowired
+    CustomerService customerService;
+
+    @RequestMapping(method = RequestMethod.GET)
+    String list(Model model) {
+        List<Customer> customers = customerService.findAll();
+        model.addAttribute("customers", customers);
+
+        return "customers/list";
+    }
+}

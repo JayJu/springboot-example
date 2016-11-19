@@ -23,6 +23,10 @@ public class CustomerService {
         return customerRepository.findAllOrderByName(pageable);
     }
 
+    public List<Customer> findAll() {
+        return customerRepository.findAllOrderByName();
+    }
+
     public Customer findOne(Integer id) {
         return customerRepository.findOne(id);
     }
