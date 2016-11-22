@@ -9,6 +9,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -37,7 +38,7 @@ public class CustomerRestController {
 
     //신규고객
     @RequestMapping(method = RequestMethod.POST)
-    ResponseEntity<Customer> postCustomers(@RequestBody Customer customer,
+    ResponseEntity<Customer> postCustomers(@Validated @RequestBody Customer customer,
                                            UriComponentsBuilder uriBuilder) {
         Customer created = customerService.create(customer);
         URI location = uriBuilder.path("api/customers/{id}")
@@ -50,7 +51,7 @@ public class CustomerRestController {
 
     //고객 한명의 정보 업데이트
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    Customer putCustomer(@PathVariable Integer id, @RequestBody Customer customer) {
+    Customer putCustomer(@PathVariable Integer id, @Validated @RequestBody Customer customer) {
         customer.setId(id);
         return customerService.update(customer);
     }
