@@ -3,5 +3,6 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__create-schema.sql" dialect="H2" />
     <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__import-initial-data.sql" dialect="H2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V3__add-user.sql" dialect="H2" />
   </component>
 </project>
