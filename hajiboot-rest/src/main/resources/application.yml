@@ -9,8 +9,11 @@ spring:
   thymeleaf:
     cache: false
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: validate
 security:
   basic:
     enabled: false
+flyway:
+  enabled: true
