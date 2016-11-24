@@ -10,11 +10,11 @@ import javax.persistence.*;
 /**
  * Created by 1015331 on 2016-11-11.
  */
-@Entity
-@Table(name = "customers")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "customers")
 public class Customer {
     @Id
     @GeneratedValue
@@ -23,4 +23,7 @@ public class Customer {
     private String firstName;
     @Column(nullable = false)
     private String lastName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = true, name = "username")
+    private User user;
 }

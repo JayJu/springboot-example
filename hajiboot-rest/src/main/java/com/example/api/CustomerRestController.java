@@ -2,6 +2,7 @@ package com.example.api;
 
 import com.example.domain.Customer;
 import com.example.service.CustomerService;
+import com.example.service.LoginUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,6 +10,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -39,8 +41,9 @@ public class CustomerRestController {
     //신규고객
     @RequestMapping(method = RequestMethod.POST)
     ResponseEntity<Customer> postCustomers(@Validated @RequestBody Customer customer,
-                                           UriComponentsBuilder uriBuilder) {
-        Customer created = customerService.create(customer);
+                                           UriComponentsBuilder uriBuilder,
+                                           @AuthenticationPrincipal LoginUserDetails userDetails) {
+        Customer created = customerService.create(customer, userDetails.getUser());
         URI location = uriBuilder.path("api/customers/{id}")
                 .buildAndExpand(created.getId()).toUri();
         HttpHeaders headers = new HttpHeaders();
@@ -51,9 +54,10 @@ public class CustomerRestController {
 
     //고객 한명의 정보 업데이트
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    Customer putCustomer(@PathVariable Integer id, @Validated @RequestBody Customer customer) {
+    Customer putCustomer(@PathVariable Integer id, @Validated @RequestBody Customer customer,
+                         @AuthenticationPrincipal LoginUserDetails userDetails) {
         customer.setId(id);
-        return customerService.update(customer);
+        return customerService.update(customer, userDetails.getUser());
     }
 
     //고객 한명의 정보 삭제
